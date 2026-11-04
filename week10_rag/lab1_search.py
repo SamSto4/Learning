@@ -55,11 +55,11 @@ def chunk_text(text, size=500, overlap=100):
     # TODO 2: start at 0. Repeat while start < len(text):
     #   end = start + size; add text[start:end] to the list;
     #   stop if end reached the end of the text; otherwise start = end - overlap
-    set chunks = []
-    set start = 0
-    set size = 500
-    set end = start + size
-    set overlap = 100
+    chunks = []
+    start = 0
+    size = 500
+    end = start + size
+    overlap = 100
     while start < len(text):
        if(end>len(text)){
 
@@ -69,7 +69,7 @@ def chunk_text(text, size=500, overlap=100):
 
        }
        chunks.append(text[start:end])
-       set placeholder = end
+       placeholder = end
        start = end-overlap
        end = placeholder+size
 
