@@ -19,3 +19,5 @@
 - Part 1 (TODO 1, similarity): done. First wrote return np.dot(a,b), then added float(...) after one hint. Predicted pair 4 lowest (correct), pair 2 highest (actual: pair 3).
 - Part 2 (TODO 2, chunk_text): done (also tidied: removed hard-coded size/overlap). Wrote a JavaScript-style draft (set keyword, curly braces); fixed each error on their own by reading the clue. Traced the end bug by hand (end = start + size). Errors-as-clues approach works well for Sam.
 - Part 3a (build_index col.add): done. Struggled with f-strings (forgot { } around doc['source']) and list comprehensions; got there with tiny steps and demo outputs. Asked good "what do I have access to?" questions.
+- Part 3b (search): done. First draft mixed f-strings with list indexing; switched to a fill-in-the-blanks template, then fixed text, source and score one at a time. All 3 parts work.
+- Remaining: teach-back, mini-quiz, summary, optional boss challenge.

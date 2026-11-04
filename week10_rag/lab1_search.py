@@ -128,7 +128,7 @@ def search(question, k=3, collection="handbook"):
         results.append({
             "text":   res["documents"][0][i],
             "source": res['metadatas'][0][i]['source'],
-            "score":  1-res['distances'][0][i],
+            "score":  round(1-res['distances'][0][i], 2),
         })
     return results
 
