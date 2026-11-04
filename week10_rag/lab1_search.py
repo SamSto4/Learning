@@ -126,7 +126,7 @@ def search(question, k=3, collection="handbook"):
     results = []
     for i in range(len(res["documents"][0])):
         results.append({
-            "text":   i,
+            "text":   res["documents"][0][i],
             "source": res['metadatas'][0][i],
             "score":  1-res['distances'][0][i],
         })
