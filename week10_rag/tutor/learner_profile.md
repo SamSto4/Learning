@@ -20,4 +20,10 @@
 - Part 2 (TODO 2, chunk_text): done (also tidied: removed hard-coded size/overlap). Wrote a JavaScript-style draft (set keyword, curly braces); fixed each error on their own by reading the clue. Traced the end bug by hand (end = start + size). Errors-as-clues approach works well for Sam.
 - Part 3a (build_index col.add): done. Struggled with f-strings (forgot { } around doc['source']) and list comprehensions; got there with tiny steps and demo outputs. Asked good "what do I have access to?" questions.
 - Part 3b (search): done. First draft mixed f-strings with list indexing; switched to a fill-in-the-blanks template, then fixed text, source and score one at a time. All 3 parts work.
-- Remaining: teach-back, mini-quiz, summary, optional boss challenge.
+- Wrap-up: teach-back gave the core idea (vectors compare meaning, new data can be added); filled in the full pipeline. Mini-quiz 5/5.
+
+## Lab 1 summary for next time
+- Clicked: embeddings and similarity, overlap, why store the source, reading error messages as clues.
+- Revisit in Lab 2: f-strings (only the parts inside { } get filled in), list comprehensions, and indexing nested lists (res["documents"][0][i]).
+- Pace: steady; works best with tiny steps, demo outputs and fill-in-the-blank templates for multi-line code.
+- Next: Day 2, Lab 2 (answer with sources). Bring 5-20 English documents in my_docs/ for the final project.
