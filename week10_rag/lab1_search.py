@@ -122,10 +122,15 @@ def search(question, k=3, collection="handbook"):
     # TODO 3b: res = col.query(query_texts=[question], n_results=k)
     #   res["documents"][0], res["metadatas"][0], res["distances"][0] are lists, best match first.
     #   Return a list of {"text": ..., "source": meta["source"], "score": round(1 - distance, 2)}
-    res = col.query()
-    list = []
-    scores = [1-([f"res['metadatas'][0] [i]" for i in range(len(chunks))])]
-    list.append("text":f"{res['documents'][0]} [i]" for i in range(len(chunks)), "source":f"res['metadatas'][0] [i]" for i in range(len(chunks)), "score": scores}
+    res = col.query(query_texts=[question], n_results=k)
+    results = []
+    for i in range(len(res["documents"][0])):
+        results.append({
+            "text":   i,
+            "source": res['metadatas'][0][i],
+            "score":  1-res['distances'][0][i],
+        })
+    return results
 
 
 # ---------- Run the lab -----------------------------------------------------
