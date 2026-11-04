@@ -61,13 +61,12 @@ def chunk_text(text, size=500, overlap=100):
     end = start + size
     overlap = 100
     while start < len(text):
-       if(end>len(text)){
+       if end > len(text):
 
           end = len(text)
           chunks.append(text[start:end])
           break
 
-       }
        chunks.append(text[start:end])
        placeholder = end
        start = end-overlap
