@@ -108,7 +108,7 @@ def build_index(folder=HANDBOOK, collection="handbook"):
         #   ids:       one unique id per chunk, e.g. f"{doc['source']} #{i}" for i in range(len(chunks))
         #   documents: the chunks
         #   metadatas: one {"source": doc["source"]} per chunk (so answers can cite the file)
-        id = [f"doc['source'] #{i}" for i in range(len(chunks))]
+        id = [f"{doc['source']} #{i}" for i in range(len(chunks))]
         col.add(documents=chunks, ids=id, metadatas={"source": doc["source"]})
         count += len(chunks)
     return count
