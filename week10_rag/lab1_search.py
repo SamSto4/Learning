@@ -70,7 +70,7 @@ def chunk_text(text, size=500, overlap=100):
        chunks.append(text[start:end])
        placeholder = end
        start = end-overlap
-       end = placeholder+size
+       end = start + size
     return chunks
 
 
