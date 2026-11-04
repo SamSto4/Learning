@@ -71,6 +71,7 @@ def chunk_text(text, size=500, overlap=100):
        placeholder = end
        start = end-overlap
        end = placeholder+size
+    return chunks
 
 
 # ---------- Given: read .txt, .md and .pdf files ----------------------------
