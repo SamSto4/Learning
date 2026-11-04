@@ -15,3 +15,5 @@
 - Checkpoint 0 (setup): done.
 - Concept 1 (Why RAG): done. Answered correctly that Claude can't answer about Nimbus Robotics because it was never in its training data.
 - Concept 2 (Embeddings): done. Correctly said "Unable to sign in" and "I forgot my login credentials" score close together.
+- Concepts 3-5 (chunking, vector DBs, pipeline): done. Needed a nudge that the model ignores text past ~1,100 chars, and that only the new file needs indexing.
+- Part 1 (TODO 1, similarity): done. First wrote return np.dot(a,b), then added float(...) after one hint. Predicted pair 4 lowest (correct), pair 2 highest (actual: pair 3).

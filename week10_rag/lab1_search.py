@@ -45,7 +45,7 @@ def similarity(a, b):
     """1 = same meaning, 0 = unrelated. Our vectors have length 1,
     so cosine similarity is just the dot product."""
     # TODO 1: return the dot product of a and b as a float.  Hint: np.dot(a, b)
-    return np.dot(a,b)
+    return float(np.dot(a,b))
 
 
 # ---------- Part 2: chunking ------------------------------------------------
