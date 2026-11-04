@@ -55,7 +55,23 @@ def chunk_text(text, size=500, overlap=100):
     # TODO 2: start at 0. Repeat while start < len(text):
     #   end = start + size; add text[start:end] to the list;
     #   stop if end reached the end of the text; otherwise start = end - overlap
-    raise NotImplementedError("TODO 2 in lab1_search.py")
+    set chunks = []
+    set start = 0
+    set size = 500
+    set end = start + size
+    set overlap = 100
+    while start < len(text):
+       if(end>len(text)){
+
+          end = len(text)
+          chunks.append(text[start:end])
+          break
+
+       }
+       chunks.append(text[start:end])
+       set placeholder = end
+       start = end-overlap
+       end = placeholder+size
 
 
 # ---------- Given: read .txt, .md and .pdf files ----------------------------
