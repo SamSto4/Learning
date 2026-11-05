@@ -33,7 +33,12 @@ def build_prompt(question, chunks):
     #   ...the chunk text...
     #   </document>
     # then return f"<documents>\n{docs}</documents>\n\nQuestion: {question}"
-    docs = "" for c in chunks: docs += f'<document source="{c["source"]}">'
+    docs = ""                          # 1. start with empty text
+    for c in chunks:                   # 2. go through each chunk
+        docs += c["text"]               # 3a. add the opening tag + \n
+        docs += </document>            # 3b. add the chunk's text + \n
+        docs += return            # 3c. add the closing tag + \n
+    return f"<documents>\n{docs}</documents>\n\nQuestion: {question}"   # 4. after the loop
 
 
 # ---------- Part 2: search -> prompt -> Claude ------------------------------
