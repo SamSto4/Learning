@@ -47,6 +47,7 @@ def answer(question, collection="handbook", k=4):
     # TODO 2: 1) chunks = search(question, k=k, collection=collection)
     #         2) reply = ask_claude(build_prompt(question, chunks), system=SYSTEM_PROMPT)
     #         3) return reply, chunks
+    chunks = search(question, k=k, collection=collection)
     raise NotImplementedError("TODO 2 in lab2_answer.py")
 
 
