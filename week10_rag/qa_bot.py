@@ -34,7 +34,7 @@ def main():
     # TODO 1: n = build_index(folder, collection=COLLECTION)
     #         then print how many chunks were indexed, and "Ask a question, or type quit."
     n = build_index(folder, collection=COLLECTION)
-    print(f"Indexed {n} " chunks from my_docs. Ask a question, or type quit.")
+    print(f"Indexed {n} chunks from my_docs. Ask a question, or type quit.")
 
 
     # Part 2: the chat loop
