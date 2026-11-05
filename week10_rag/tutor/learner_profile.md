@@ -31,3 +31,5 @@
 ## Progress (Lab 2)
 - Concepts 1-5: done. Needed clarification that "I don't know" beats a wrong confident answer, and that the lab makes 4 calls to one separate Claude (no API).
 - Part 1 (TODO 1, build_prompt): done. Asked for a skeleton, then filled the blanks; fixed slot order, quotes around "</document>", and a missing \n.
+- Part 2 (TODO 2, answer): done. Wrote all 3 lines correctly, one at a time. Predicted the weak prompt would cite sources (it did not) and that the CEO answer would be long (correct).
+- Part 3 (TODO 3, SYSTEM_PROMPT): done. Wrote the 5 rules plus 2 of their own (helpful, friendly tone). Answers now cite [file] sources and the CEO question gets exactly "I don't know based on the documents."
