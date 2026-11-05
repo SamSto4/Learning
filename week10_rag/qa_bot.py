@@ -43,7 +43,13 @@ def main():
     #   stop (break) if the question is empty, "quit" or "exit"
     #   reply, chunks = answer(question, collection=COLLECTION)
     #   print the reply, then the sources (each file once): ", ".join(dict.fromkeys(c["source"] for c in chunks))
-    print("TODO 1 and TODO 2 in qa_bot.py are next.")
+    while True:                                   # 1. loop forever
+        question = input("\nYou: ").strip()       # 2. wait for the user to type
+              if question in ("", "quit", "exit"):                      
+            break
+               reply, chunks = answer(question, collection="my_docs")            
+        print(bot:)                           # 5. print Claude's reply
+        print("Sources:", ", ".join(dict.fromkeys(c["source"] for c in chunks)))   # 6. given
 
 
 if __name__ == "__main__":
