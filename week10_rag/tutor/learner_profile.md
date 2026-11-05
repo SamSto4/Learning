@@ -44,3 +44,6 @@
 ## Progress (Final project: Ask My Docs)
 - Documents: 5 notes typed by Sam in my_docs/ (rhcp, guitar_techniques, attack_on_titan, fight_club, chess), 58 chunks.
 - qa_bot.py TODO 1 and TODO 2: done. Tripped on f-string quotes and indentation; Claude fixed the loop spacing at Sam's request. Bot answers with citations and says "I don't know".
+- Testing: my_questions.json hit@3 = 5/5 (questions reused exact words). Hard-mode hard_questions.json also 3/3 at file level, but the answer chunk was missing from the top 3 for 2 of 3 questions.
+- Failure found: the Titans "13 more years" question got "I don't know" (retrieval failure; the curse sentence sits in a chunk dominated by the Nine Titans table). Fix tried: rephrased with "inherit" and "curse", and the answer chunk moved to #1 (0.39); the bot answered "13 more years [attack_on_titan.md]".
+- Also noticed: rules 6-7 (helpful, friendly) make the "I don't know" reply add extra sentences instead of the exact fixed line.
