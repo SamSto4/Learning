@@ -49,7 +49,7 @@ def answer(question, collection="handbook", k=4):
     #         3) return reply, chunks
     chunks = search(question, k=k, collection=collection)
     reply = ask_claude(build_prompt(question, chunks), system=SYSTEM_PROMPT)
-    raise NotImplementedError("TODO 2 in lab2_answer.py")
+    return reply, chunks
 
 
 # ---------- Part 3: the rules that keep answers grounded ---------------------
