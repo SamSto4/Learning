@@ -33,3 +33,10 @@
 - Part 1 (TODO 1, build_prompt): done. Asked for a skeleton, then filled the blanks; fixed slot order, quotes around "</document>", and a missing \n.
 - Part 2 (TODO 2, answer): done. Wrote all 3 lines correctly, one at a time. Predicted the weak prompt would cite sources (it did not) and that the CEO answer would be long (correct).
 - Part 3 (TODO 3, SYSTEM_PROMPT): done. Wrote the 5 rules plus 2 of their own (helpful, friendly tone). Answers now cite [file] sources and the CEO question gets exactly "I don't know based on the documents."
+- Wrap-up: teach-back named retrieve (search), augment (build_prompt) and generate (Claude) correctly. Mini-quiz 4/4.
+
+## Lab 2 summary for next time
+- Clicked: the RAG pipeline end to end, grounding rules, why "I don't know" and citations matter, prompt injection.
+- Revisit: one statement per line, quotes around text, building strings with += and "\n".
+- Pace: faster than Lab 1; skeletons with blanks still help for multi-line code.
+- Next: final project "Ask My Docs" (tutor/project_ask_my_docs.md). Bring 5-20 English documents in my_docs/.
