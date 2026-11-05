@@ -36,7 +36,7 @@ def build_prompt(question, chunks):
     docs = ""                          # 1. start with empty text
     for c in chunks:                   # 2. go through each chunk
         docs += f'<document source="{c["source"]}">\n'             # 3a. add the opening tag + \n
-        docs += c["text"]              # 3b. add the chunk's text + \n
+        docs += c["text"] + "\n"              # 3b. add the chunk's text + \n
         docs += "</document>\n"               # 3c. add the closing tag + \n
     return f"<documents>\n{docs}</documents>\n\nQuestion: {question}"   # 4. after the loop
 

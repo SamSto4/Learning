@@ -27,3 +27,7 @@
 - Revisit in Lab 2: f-strings (only the parts inside { } get filled in), list comprehensions, and indexing nested lists (res["documents"][0][i]).
 - Pace: steady; works best with tiny steps, demo outputs and fill-in-the-blank templates for multi-line code.
 - Next: Day 2, Lab 2 (answer with sources). Bring 5-20 English documents in my_docs/ for the final project.
+
+## Progress (Lab 2)
+- Concepts 1-5: done. Needed clarification that "I don't know" beats a wrong confident answer, and that the lab makes 4 calls to one separate Claude (no API).
+- Part 1 (TODO 1, build_prompt): done. Asked for a skeleton, then filled the blanks; fixed slot order, quotes around "</document>", and a missing \n.
