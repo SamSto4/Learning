@@ -45,9 +45,9 @@ def main():
     #   print the reply, then the sources (each file once): ", ".join(dict.fromkeys(c["source"] for c in chunks))
     while True:                                   # 1. loop forever
         question = input("\nYou: ").strip()       # 2. wait for the user to type
-              if question in ("", "quit", "exit"):                      
+        if question in ("", "quit", "exit"):
             break
-               reply, chunks = answer(question, collection="my_docs")            
+        reply, chunks = answer(question, collection="my_docs")
         print(bot:)                           # 5. print Claude's reply
         print("Sources:", ", ".join(dict.fromkeys(c["source"] for c in chunks)))   # 6. given
 
