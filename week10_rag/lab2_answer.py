@@ -33,7 +33,7 @@ def build_prompt(question, chunks):
     #   ...the chunk text...
     #   </document>
     # then return f"<documents>\n{docs}</documents>\n\nQuestion: {question}"
-    raise NotImplementedError("TODO 1 in lab2_answer.py")
+    docs = "" for c in chunks: docs += f'<document source="{c["source"]}">'
 
 
 # ---------- Part 2: search -> prompt -> Claude ------------------------------
