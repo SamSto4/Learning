@@ -40,3 +40,7 @@
 - Revisit: one statement per line, quotes around text, building strings with += and "\n".
 - Pace: faster than Lab 1; skeletons with blanks still help for multi-line code.
 - Next: final project "Ask My Docs" (tutor/project_ask_my_docs.md). Bring 5-20 English documents in my_docs/.
+
+## Progress (Final project: Ask My Docs)
+- Documents: 5 notes typed by Sam in my_docs/ (rhcp, guitar_techniques, attack_on_titan, fight_club, chess), 58 chunks.
+- qa_bot.py TODO 1 and TODO 2: done. Tripped on f-string quotes and indentation; Claude fixed the loop spacing at Sam's request. Bot answers with citations and says "I don't know".

@@ -48,7 +48,7 @@ def main():
         if question in ("", "quit", "exit"):
             break
         reply, chunks = answer(question, collection="my_docs")
-        print(bot:)                           # 5. print Claude's reply
+        print("Bot:", reply)
         print("Sources:", ", ".join(dict.fromkeys(c["source"] for c in chunks)))   # 6. given
 
 
