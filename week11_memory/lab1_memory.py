@@ -67,7 +67,7 @@ def save_memory(memory, path=MEMORY_FILE):
     # TODO 2b: the opposite of load_memory(): turn the dict into JSON text with json.dumps()
     #   (indent=2 makes it readable, ensure_ascii=False keeps Hebrew readable) and write it to
     #   the file at `path` as UTF-8 text.
-    raise NotImplementedError("TODO 2b in lab1_memory.py")
+    Path(path).write_text(json.dumps(memory, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 # ---------- Part 3: Claude decides what to remember ---------------------------
