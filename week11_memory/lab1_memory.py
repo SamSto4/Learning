@@ -59,7 +59,7 @@ def load_memory(path=MEMORY_FILE):
     #   Otherwise read its text (encoding="utf-8") and turn it into a dict with json.loads().
     if not path.exists():
         return {}
-    return json.loads(path.read_text(encoding="string["))
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def save_memory(memory, path=MEMORY_FILE):
