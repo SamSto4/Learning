@@ -89,7 +89,7 @@ def extract_facts(message):
     Returns a dict such as {"name": "Noa", "diet": "vegetarian"}."""
     # TODO 3: ask Claude for JSON that follows FACTS_SCHEMA (ask_claude_json() in llm.py), with
     #   EXTRACT_SYSTEM as the system prompt. Return only the facts dict from the result.
-    raise NotImplementedError("TODO 3 in lab1_memory.py")
+    return ask_claude_json(message, schema=FACTS_SCHEMA, system=EXTRACT_SYSTEM)["facts"]
 
 
 def chat_with_memory(user_message, memory, history, persona=CHAT_SYSTEM, past=""):
