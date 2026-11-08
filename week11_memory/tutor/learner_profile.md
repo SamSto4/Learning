@@ -47,3 +47,17 @@
 - Testing: my_questions.json hit@3 = 5/5 (questions reused exact words). Hard-mode hard_questions.json also 3/3 at file level, but the answer chunk was missing from the top 3 for 2 of 3 questions.
 - Failure found: the Titans "13 more years" question got "I don't know" (retrieval failure; the curse sentence sits in a chunk dominated by the Nine Titans table). Fix tried: rephrased with "inherit" and "curse", and the answer chunk moved to #1 (0.39); the bot answered "13 more years [attack_on_titan.md]".
 - Also noticed: rules 6-7 (helpful, friendly) make the "I don't know" reply add extra sentences instead of the exact fixed line.
+
+## Progress (Week 11 Lab 1: memory)
+- Setup: Claude copied the week11_memory kit into the repo, made .venv (Python 3.13), setup_check all OK. Profile copied from week10_rag.
+- Concepts 1-4 (stateless, in-context memory, external memory types, schemas): all check questions right on the first try.
+- Part 1 (TODO 1, build_prompt): asked for the blanks after the hints, then typed the lines. A stray "goes last" (lost #) gave a SyntaxError; fixed it by reading the ^^^^ arrows. Predictions 2/2.
+- Part 2 (TODO 2a, 2b): load_memory first used encoding="string["; fixed to "utf-8" after reading the LookupError. save_memory right the first time. Saw run #1 -> run #2.
+- Part 3 (TODO 3, extract_facts): right the first time. Privacy check passed (kept chess, dropped the password).
+- Wrap-up: teach-back gave the core idea (save facts to a file); needed the reminder that facts must be loaded back into the prompt. Mini-quiz 5/5.
+
+## Week 11 Lab 1 summary for next time
+- Clicked: stateless model, sliding window, semantic vs episodic memory, JSON schema, load/save as opposites.
+- Revisit: comments need a # (copied lines lost it), encoding names ("utf-8"), getting values out of a dict (m["content"]).
+- Pace: faster than Week 10; one-line skeletons with blanks work well. Skipped the boss challenge (compaction).
+- Next: Week 11 Lab 2, "Plan my evening" (tutor/lab2_planner.md), episodic memory.
