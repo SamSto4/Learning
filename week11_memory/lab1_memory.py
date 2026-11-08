@@ -57,7 +57,9 @@ def load_memory(path=MEMORY_FILE):
     path = Path(path)
     # TODO 2a: if the file doesn't exist yet (path.exists()), return {}.
     #   Otherwise read its text (encoding="utf-8") and turn it into a dict with json.loads().
-    raise NotImplementedError("TODO 2a in lab1_memory.py")
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="string["))
 
 
 def save_memory(memory, path=MEMORY_FILE):
