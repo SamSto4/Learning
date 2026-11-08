@@ -47,7 +47,7 @@ def build_prompt(history, user_message, max_messages=6):
             lines.append(f"User: {m['content']}")
         else:
             lines.append(f"Assistant: {m['content']}")
-    lines.append(f"User: {user_message}")     goes last
+    lines.append(f"User: {user_message}")
     return "\n".join(lines)
 
 
