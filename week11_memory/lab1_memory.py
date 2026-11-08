@@ -41,7 +41,14 @@ def build_prompt(history, user_message, max_messages=6):
     # TODO 1: make an empty list of lines. For each message in the LAST max_messages of
     #   history (hint: history[-max_messages:]), add "User: <content>" or "Assistant: <content>".
     #   Then add "User: <user_message>" and return the lines joined with "\n".
-    raise NotImplementedError("TODO 1 in lab1_memory.py")
+    lines = []
+    for m in history[-max_messages:]:
+        if m["role"] == "user":
+            lines.append(f"User: {m['content']}")
+        else:
+            lines.append(f"Assistant: {m['content']}")
+    lines.append(f"User: {user_message}")     goes last
+    return "\n".join(lines)
 
 
 # ---------- Part 2: external memory in a file --------------------------------
