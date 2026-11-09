@@ -169,7 +169,7 @@ def recall_episodes(query, k=1, collection="episodes"):
         return []
     # TODO 3b: query the collection (n_results=min(k, col.count())), like search() in Week 10.
     #   Return a list of {"text": ..., "time": ..., "score": round(1 - distance, 2)}, best first.
-    res = col.query(query_texts=[document], n_results=min(k, col.count()))
+    res = col.query(query_texts=[query], n_results=min(k, col.count()))
     results = []
     for i in range(len(res["documents"][0])):
         results.append({
