@@ -106,7 +106,7 @@ def make_plan(goal, memory, past=""):
               f"A similar past episode (use it if it helps):\n{past or '(none)'}")
     # TODO 1: call the planner the way extract_facts() calls Claude in Lab 1, but with this
     #   prompt, PLAN_SCHEMA and PLANNER_SYSTEM. Return only the list of steps.
-    raise NotImplementedError("TODO 1 in lab2_planner.py")
+    return ask_claude_json(prompt, schema=PLAN_SCHEMA, system=PLANNER_SYSTEM)["steps"]
 
 
 # ---------- Part 2: run the plan, keep the agent's state, let the writer answer --
