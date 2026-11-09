@@ -122,7 +122,7 @@ def run_plan(goal, steps):
             output = tool(step["input"])
         else:
             output = f"ERROR: unknown tool {step['tool']}"
-        raise NotImplementedError("TODO 2 in lab2_planner.py")
+        state["results"].append({"step": i, "tool": step["tool"], "input": step["input"], "output": output})
         print(f"  step {i}/{len(steps)} done: {step['tool']}({step['input']!r})")
     state["status"] = "done"
     return state
