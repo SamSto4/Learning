@@ -118,6 +118,10 @@ def run_plan(goal, steps):
         #   If there is no such tool, use the text "ERROR: unknown tool <name>" as the output instead.
         #   Then append {"step": i, "tool": ..., "input": ..., "output": ...} to state["results"].
         tool = TOOLS.get(step["tool"])
+        if tool:
+            output = tool(step["input"])
+        else:
+            output = f"ERROR: unknown tool {step['tool']}"
         raise NotImplementedError("TODO 2 in lab2_planner.py")
         print(f"  step {i}/{len(steps)} done: {step['tool']}({step['input']!r})")
     state["status"] = "done"
