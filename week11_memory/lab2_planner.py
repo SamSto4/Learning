@@ -158,7 +158,7 @@ def save_episode(text, collection="episodes"):
     # TODO 3a: add ONE record to col (col.add, like Week 10): a unique id (time.time_ns() makes
     #   one), the text as the document, and the current time as metadata under the key "time"
     #   (datetime.now().isoformat(timespec="seconds")).
-    raise NotImplementedError("TODO 3a in lab2_planner.py")
+    col.add(ids=[f"episode-{time.time_ns()}"], documents=[text], metadatas=[{"time": datetime.now().isoformat(timespec="seconds")}])
     return col.count()
 
 
