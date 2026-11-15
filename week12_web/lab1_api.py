@@ -50,7 +50,7 @@ def health():
     """Tell callers the server is up. Flask turns a returned dict into a JSON response."""
     # TODO 1: return a dict with "status": "ok" and "assistant": "Remy".
     #   That's all: Flask turns the dict into JSON and sends status 200 (OK).
-    raise NotImplementedError("TODO 1 in lab1_api.py")
+    return {"status": "ok", "assistant": "Remy"}
 
 
 # ---------- Part 2: an endpoint that serves AI ---------------------------------
