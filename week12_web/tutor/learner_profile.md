@@ -61,3 +61,18 @@
 - Revisit: comments need a # (copied lines lost it), encoding names ("utf-8"), getting values out of a dict (m["content"]).
 - Pace: faster than Week 10; one-line skeletons with blanks work well. Skipped the boss challenge (compaction).
 - Next: Week 11 Lab 2, "Plan my evening" (tutor/lab2_planner.md), episodic memory.
+
+## Progress (Week 12 Lab 1: Flask API)
+- Setup: Claude copied the week12_web kit into the repo, made .venv (Python 3.13), setup_check all OK. Profile copied from week11_memory.
+- Concepts C1-C4 (client/server, HTTP + status codes, Flask basics, AI endpoint worries): all check questions right on the first try.
+- TODO 1-4: all right the first time. Preferred sending just the blanks (comma-separated); Claude assembled the lines. One stray "]" typed after 503 was left out.
+- Part 3: Claude ran the server in the background (no second terminal in cloud chat); saw the "POST /api/chat" 200 log line.
+- Pair check (self-attack): predicted 400/400/405, all right. Prediction "503 = server's fault" right.
+- Wrap-up: teach-back gave the core (client POSTs JSON, server answers with a code); needed the middle steps (check input, then call Claude). Mini-quiz 5/5, answered in short pieces.
+
+## Week 12 Lab 1 summary for next time
+- Clicked: client vs server, 400 vs 503, dict -> JSON + 200, check input before the model, test client vs real server.
+- Revisit: GET is also idempotent; POST is neither. Teach-backs: include the middle steps.
+- Pace: fast; "just the blanks" works very well.
+- Next: Week 12 Lab 2 (web app: .env settings, memory endpoint, token-protected delete, HTML/JS page).
+- Paused earlier: Week 11 Lab 2 quiz (stopped at Q3), Week 11 project "Remember Me" (at C1), Week 10 PROJECT_README.
