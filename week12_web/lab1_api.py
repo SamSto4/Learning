@@ -61,7 +61,14 @@ def get_message(data):
     #   data isn't a dict, or data.get("message") isn't a string, or it is empty after .strip().
     #   Return (None, f"Message too long (max {MAX_CHARS} characters)") when it is longer than MAX_CHARS.
     #   Otherwise return (the stripped message, None).
-    raise NotImplementedError("TODO 2 in lab1_api.py")
+    if not isinstance(data, dict):
+        return None, 'Send JSON like {"message": "Hi"}'
+    message = data.get("message")
+    if not isinstance(message, str) or not message.strip():
+        return None, 'Send JSON like {"message": "Hi"}'
+    if len(message) > MAX_CHARS:
+        return None, f"Message too long (max {MAX_CHARS} characters)"
+    return message.strip(), None
 
 
 @app.post("/api/chat")
