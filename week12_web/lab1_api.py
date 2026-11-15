@@ -93,7 +93,10 @@ def call_api(message, base_url=BASE_URL):
     # TODO 4: send it with requests.post() to f"{base_url}/api/chat", with json={"message": message}
     #   and timeout=120 (Week 4!). If the status code isn't 200, raise RuntimeError with the code and
     #   the "error" from the JSON body. Otherwise return the "reply" from the JSON body.
-    raise NotImplementedError("TODO 4 in lab1_api.py")
+    response = requests.post(f"{base_url}/api/chat", json={"message": message}, timeout=120)
+    if response.status_code != 200:
+        raise RuntimeError(f"{response.status_code}: {response.json().get('error')}")
+    return response.json()["reply"]
 
 
 # ---------- the demo: run the parts you have finished ----------------------------
