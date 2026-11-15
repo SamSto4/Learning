@@ -80,7 +80,11 @@ def chat_endpoint():
     # TODO 3: get the answer with chat(message) (from assistant.py) and return {"reply": <the answer>}.
     #   If chat() raises ClaudeCodeError (not logged in, usage limit...), return
     #   {"error": "The assistant is unavailable right now. Try again."} with status 503 instead.
-    raise NotImplementedError("TODO 3 in lab1_api.py")
+    try:
+        reply = chat(message)
+        return {"reply": reply}
+    except ClaudeCodeError:
+        return {"error": "The assistant is unavailable right now. Try again."}, 503
 
 
 # ---------- Part 3: a client for your API ----------------------------------------
