@@ -91,7 +91,13 @@ def chat_endpoint():
     #      add them (memory.update) and save the memory.
     #   2) reply = chat(message, memory, history, persona=persona_for(settings["name"]))
     #   3) return {"reply": reply, "remembered": facts}
-    raise NotImplementedError("TODO 2 in lab2_web.py")
+    facts = extract_facts(message)
+    memory = load_memory(MEMORY_FILE)
+    if facts:
+        memory.update(facts)
+        save_memory(memory, MEMORY_FILE)
+    reply = chat(message, memory, history, persona=persona_for(settings["name"]))
+    return {"reply": reply, "remembered": facts}
 
 
 # ---------- Part 3: memory endpoints -------------------------------------------------
