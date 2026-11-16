@@ -48,7 +48,11 @@ def load_settings():
     #   If the token is shorter than 16 characters, raise RuntimeError with a message that says how to
     #   fix it (copy .env.example to .env and put a random token in it).
     #   Return {"name": <the name>, "admin_token": <the token>}.
-    raise NotImplementedError("TODO 1 in lab2_web.py")
+    name = os.environ.get("ASSISTANT_NAME", "Remy")
+    token = os.environ.get("ADMIN_TOKEN", "")
+    if len(token) < 16:
+        raise RuntimeError("ADMIN_TOKEN is missing or too short. Copy .env.example to .env and put a random token in it.")
+    return {"name": name, "admin_token": token}
 
 
 def persona_for(name):
